@@ -37,11 +37,16 @@ open class ASWebAuthenticationURLHandler: OAuthSwiftURLHandlerType {
                     let urlString = "\(self.callbackUrlScheme):?error=\(msg ?? "UNKNOWN")&error_domain=\(errorDomain)&error_code=\(errorCode)"
                     let url = URL(string: urlString)!
                     #if !OAUTH_APP_EXTENSIONS
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    OAuthSwift.handle(url: url)
+                    // dont call UIApplication.shared.open this can be handlet without any callback
+                    // UIApplication.shared.open(url, options: [:], completionHandler: nil)
                     #endif
                 } else if let successURL = callback {
                     #if !OAUTH_APP_EXTENSIONS
-                    UIApplication.shared.open(successURL, options: [:], completionHandler: nil)
+                    // ont call UIApplication.shared.open this can be handlet without any callback
+                    // the app is running in the background. calling open would result in an error
+                    OAuthSwift.handle(url: successURL)
+                    // UIApplication.shared.open(successURL, options: [:], completionHandler: nil)
                     #endif
                 }
         })
