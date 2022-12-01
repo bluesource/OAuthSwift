@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import OAuthSwift
+@testable import OAuthSwiftBluesource
 
 
 let DefaultTimeout: TimeInterval = 10

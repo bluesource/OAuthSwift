@@ -9,7 +9,7 @@
 import Foundation
 
 import XCTest
-@testable import OAuthSwift
+@testable import OAuthSwiftBluesource
 
 class URLTest: XCTestCase {
 

@@ -25,7 +25,7 @@ import PackageDescription
 let package = Package(
     name: "OAuthSwiftBluesource",
     products: [
-        .library(name: "OAuthSwiftBluesource", targets: ["OAuthSwift"]),
+        .library(name: "OAuthSwiftBluesource", targets: ["OAuthSwiftBluesource"]),
     ],
     dependencies: [
         .package(url: "https://github.com/phimage/Erik.git", .upToNextMajor(from: "5.0.0")),
@@ -33,8 +33,8 @@ let package = Package(
         .package(url: "https://github.com/httpswift/swifter.git", .upToNextMajor(from: "1.5.0"))
     ],
     targets: [
-        .target(name: "OAuthSwift", dependencies: [], path: "Sources"),
-        .testTarget(name: "OAuthSwiftTests", dependencies: ["OAuthSwift", "Erik", "Kanna", "Swifter"], path: "OAuthSwiftTests"),
+        .target(name: "OAuthSwiftBluesource", dependencies: [], path: "Sources"),
+        .testTarget(name: "OAuthSwiftTests", dependencies: ["OAuthSwiftBluesource", "Erik", "Kanna", "Swifter"], path: "OAuthSwiftTests"),
     ]
 )
 

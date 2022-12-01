@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import OAuthSwift
+import OAuthSwiftBluesource
 
 enum AccessTokenResponse {
     case accessToken(String), code(String, state:String?), error(String,String), none

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import OAuthSwift
+@testable import OAuthSwiftBluesource
 
 class SignTests: XCTestCase {
 

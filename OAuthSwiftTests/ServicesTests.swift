@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import OAuthSwift
+import OAuthSwiftBluesource
 import Erik
 
 class ServicesTests: XCTestCase {

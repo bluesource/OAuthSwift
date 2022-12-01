@@ -6,7 +6,7 @@
 //  Copyright © 2017 Dongri Jin. All rights reserved.
 //
 
-import OAuthSwift
+import OAuthSwiftBluesource
 import XCTest
 
 /**

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import OAuthSwift
+@testable import OAuthSwiftBluesource
 import Swifter
 
 class OAuth1SwiftRequestTests: XCTestCase {
